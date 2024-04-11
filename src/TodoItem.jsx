@@ -1,4 +1,4 @@
-const TodoItem = ({ title, completed }) => {
+const TodoItem = ({ title, completed, id, completeTodo }) => {
   return (
       <li
         className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
@@ -10,6 +10,7 @@ const TodoItem = ({ title, completed }) => {
           value=""
           aria-label="..."
           checked={completed}
+          onChange={() => completeTodo(id)}
         />
         {/* Completed: */}
         {/* <s>Todo item - random...</s> */}

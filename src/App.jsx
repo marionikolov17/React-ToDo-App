@@ -20,6 +20,18 @@ function App() {
     })
   }
 
+  function completeTodo(id) {
+    setTodos(currentTodos => {
+      return currentTodos.map(todo => {
+        if (todo.id === id) {
+          return {...todo, completed: true}
+        }
+
+        return todo
+      })
+    })
+  }
+
   return (
     <>
       <section className="vh-100 gradient-custom">
@@ -39,7 +51,7 @@ function App() {
                     >
                       <ul className="list-group mb-0">
                         {todos.map(todo => {
-                          return <TodoItem title={todo.title} completed={todo.completed} key={todo.id}/>
+                          return <TodoItem title={todo.title} completed={todo.completed} id={todo.id} completeTodo={completeTodo} key={todo.id}/>
                         })}
                       </ul>
                     </div>
