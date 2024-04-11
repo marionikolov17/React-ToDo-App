@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import { TodoItem } from "./TodoItem";
+import { CreateForm } from "./CreateForm";
 
 function App() {
   return (
@@ -11,20 +12,7 @@ function App() {
             <div className="col col-xl-10">
               <div className="card">
                 <div className="card-body p-5">
-                  <form className="d-flex justify-content-center align-items-center mb-4 w-100">
-                    <div className="form-floating flex-fill">
-                      <input type="text" id="form2" className="form-control" />
-                      <label htmlFor="form2">New task...</label>
-                    </div>
-                    <button
-                      type="submit"
-                      data-mdb-button-init
-                      data-mdb-ripple-init
-                      className="btn btn-info ms-2"
-                    >
-                      Add
-                    </button>
-                  </form>
+                  <CreateForm />
 
                   <ul
                     className="nav nav-tabs mb-4 pb-2"
