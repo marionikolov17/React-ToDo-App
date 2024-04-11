@@ -14,6 +14,9 @@ function App() {
 
     return JSON.parse(currentTodos);
   });
+  const [currentPageHash, setCurrentPageHash] = useState(() => {
+    return window.location.hash;
+  })
 
   useEffect(() => {
     localStorage.setItem("todos", JSON.stringify(todos));
@@ -54,10 +57,10 @@ function App() {
                 <div className="card-body p-5">
                   <CreateForm onSubmit={createTodo} />
 
-                  <TabsNavigation />
+                  <TabsNavigation currentPageHash={currentPageHash} setCurrentPageHash={setCurrentPageHash}/>
                   <div className="tab-content" id="ex1-content">
                     {/* Ext Tab 1 - All */}
-                    <div className={window.location.hash === "" || window.location.hash === "#ex1-tabs-1" ? "tab-pane fade show active" : "tab-pane fade"} id="ex1-tabs-1">
+                    <div className={currentPageHash === "" || currentPageHash === "#ex1-tabs-1" ? "tab-pane fade show active" : "tab-pane fade"} id="ex1-tabs-1">
                       <ul className="list-group mb-0">
                         {todos.length === 0 && <p>There are not any todos, yet!</p>}
                         {todos.map((todo) => {
@@ -74,7 +77,7 @@ function App() {
                       </ul>
                     </div>
                     {/* Ext Tab 2 */}
-                    <div className={window.location.hash === "#ex1-tabs-2" ? "tab-pane fade show active" : "tab-pane fade"} id="ex1-tabs-2">
+                    <div className={currentPageHash === "#ex1-tabs-2" ? "tab-pane fade show active" : "tab-pane fade"} id="ex1-tabs-2">
                       <ul className="list-group mb-0">
                         {todos.filter((todo) => todo.completed !== true).length === 0 && <p>There are not any active todos, yet!</p>}
                         {todos
@@ -93,7 +96,7 @@ function App() {
                       </ul>
                     </div>
                     {/* Ext Tab 3 */}
-                    <div className={window.location.hash === "#ex1-tabs-3" ? "tab-pane fade show active" : "tab-pane fade"} id="ex1-tabs-3">
+                    <div className={currentPageHash === "#ex1-tabs-3" ? "tab-pane fade show active" : "tab-pane fade"} id="ex1-tabs-3">
                       <ul className="list-group mb-0">
                         {todos.filter((todo) => todo.completed === true).length === 0 && <p>There are not any completed todos, yet!</p>}
                         {todos
