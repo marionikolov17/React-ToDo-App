@@ -1,4 +1,4 @@
-export default function TodoItem() {
+const TodoItem = () => {
   return (
       <li
         className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
@@ -18,3 +18,5 @@ export default function TodoItem() {
       </li>
   );
 }
+
+export default TodoItem;

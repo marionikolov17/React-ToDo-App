@@ -1,4 +1,4 @@
-export default function TabsNavigation() {
+const TabsNavigation = () => {
   return (
     <ul className="nav nav-tabs mb-4 pb-2" id="ex1" role="tablist">
       <li className="nav-item" role="presentation">
@@ -42,4 +42,6 @@ export default function TabsNavigation() {
       </li>
     </ul>
   );
-}
+};
+
+export default TabsNavigation;

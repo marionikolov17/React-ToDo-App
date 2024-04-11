@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
-import { TodoItem } from "./TodoItem";
-import { CreateForm } from "./CreateForm";
+import TodoItem from "./TodoItem";
+import CreateForm from "./CreateForm";
 import TabsNavigation from "./TabsNavigation";
 
 function App() {
@@ -17,11 +17,10 @@ function App() {
 
                   <TabsNavigation />
                   <div className="tab-content" id="ex1-content">
+                    {/* Ext Tab 1 */}
                     <div
                       className="tab-pane fade show active"
                       id="ex1-tabs-1"
-                      role="tabpanel"
-                      aria-labelledby="ex1-tab-1"
                     >
                       <ul className="list-group mb-0">
                         <TodoItem />
@@ -29,20 +28,18 @@ function App() {
                         <TodoItem />
                       </ul>
                     </div>
+                    {/* Ext Tab 2 */}
                     <div
                       className="tab-pane fade"
                       id="ex1-tabs-2"
-                      role="tabpanel"
-                      aria-labelledby="ex1-tab-2"
                     >
                       <ul className="list-group mb-0">
                       </ul>
                     </div>
+                    {/* Ext Tab 3 */}
                     <div
                       className="tab-pane fade"
                       id="ex1-tabs-3"
-                      role="tabpanel"
-                      aria-labelledby="ex1-tab-3"
                     >
                       <ul className="list-group mb-0">
                       </ul>
