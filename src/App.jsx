@@ -3,8 +3,23 @@ import "./style.css";
 import TodoItem from "./TodoItem";
 import CreateForm from "./CreateForm";
 import TabsNavigation from "./TabsNavigation";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    console.log(todos);
+  }, [todos])
+
+  function createTodo(e, title) {
+    e.preventDefault();
+
+    setTodos(currentTodos => {
+      return [...currentTodos, { id: crypto.randomUUID(), title, completed: false }];
+    })
+  }
+
   return (
     <>
       <section className="vh-100 gradient-custom">
@@ -13,7 +28,7 @@ function App() {
             <div className="col col-xl-10">
               <div className="card">
                 <div className="card-body p-5">
-                  <CreateForm />
+                  <CreateForm onSubmit={createTodo}/>
 
                   <TabsNavigation />
                   <div className="tab-content" id="ex1-content">
