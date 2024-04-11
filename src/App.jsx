@@ -10,12 +10,10 @@ function App() {
             <div className="col col-xl-10">
               <div className="card">
                 <div className="card-body p-5">
-                  <form className="d-flex justify-content-center align-items-center mb-4">
-                    <div data-mdb-input-init className="form-outline flex-fill">
+                  <form className="d-flex justify-content-center align-items-center mb-4 w-100">
+                    <div className="form-floating flex-fill">
                       <input type="text" id="form2" className="form-control" />
-                      <label className="form-label" htmlFor="form2">
-                        New task...
-                      </label>
+                      <label htmlFor="form2">New task...</label>
                     </div>
                     <button
                       type="submit"
@@ -82,7 +80,7 @@ function App() {
                       <ul className="list-group mb-0">
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -95,7 +93,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -108,7 +106,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -120,7 +118,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -132,7 +130,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-0 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -153,7 +151,7 @@ function App() {
                       <ul className="list-group mb-0">
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -165,7 +163,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -177,7 +175,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-0 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -198,7 +196,7 @@ function App() {
                       <ul className="list-group mb-0">
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
@@ -211,7 +209,7 @@ function App() {
                         </li>
                         <li
                           className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{backgroundColor: "#f4f6f7"}}
+                          style={{ backgroundColor: "#f4f6f7" }}
                         >
                           <input
                             className="form-check-input me-2"
