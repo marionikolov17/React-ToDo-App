@@ -45,8 +45,6 @@ function App() {
     });
   }
 
-  console.log(window.location.hash)
-
   return (
     <>
       <section className="vh-100 gradient-custom">
