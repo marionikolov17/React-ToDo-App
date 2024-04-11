@@ -1,4 +1,4 @@
-const TodoItem = () => {
+const TodoItem = (props) => {
   return (
       <li
         className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
@@ -9,12 +9,13 @@ const TodoItem = () => {
           type="checkbox"
           value=""
           aria-label="..."
-          defaultChecked
+          checked={props.completed}
         />
         {/* Completed: */}
         {/* <s>Todo item - random...</s> */}
         {/* Active: */}
-        Todo item - random...
+        {props.completed && <s>{props.title}</s>}
+        {!props.completed && props.title}
       </li>
   );
 }
