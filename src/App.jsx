@@ -100,19 +100,6 @@ function App() {
                             type="checkbox"
                             value=""
                             aria-label="..."
-                            checked
-                          />
-                          <s>Dapibus ac facilisis in</s>
-                        </li>
-                        <li
-                          className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{ backgroundColor: "#f4f6f7" }}
-                        >
-                          <input
-                            className="form-check-input me-2"
-                            type="checkbox"
-                            value=""
-                            aria-label="..."
                           />
                           Morbi leo risus
                         </li>
@@ -127,18 +114,6 @@ function App() {
                             aria-label="..."
                           />
                           Porta ac consectetur ac
-                        </li>
-                        <li
-                          className="list-group-item d-flex align-items-center border-0 mb-0 rounded"
-                          style={{ backgroundColor: "#f4f6f7" }}
-                        >
-                          <input
-                            className="form-check-input me-2"
-                            type="checkbox"
-                            value=""
-                            aria-label="..."
-                          />
-                          Vestibulum at eros
                         </li>
                       </ul>
                     </div>
@@ -161,30 +136,6 @@ function App() {
                           />
                           Morbi leo risus
                         </li>
-                        <li
-                          className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{ backgroundColor: "#f4f6f7" }}
-                        >
-                          <input
-                            className="form-check-input me-2"
-                            type="checkbox"
-                            value=""
-                            aria-label="..."
-                          />
-                          Porta ac consectetur ac
-                        </li>
-                        <li
-                          className="list-group-item d-flex align-items-center border-0 mb-0 rounded"
-                          style={{ backgroundColor: "#f4f6f7" }}
-                        >
-                          <input
-                            className="form-check-input me-2"
-                            type="checkbox"
-                            value=""
-                            aria-label="..."
-                          />
-                          Vestibulum at eros
-                        </li>
                       </ul>
                     </div>
                     <div
@@ -206,19 +157,6 @@ function App() {
                             checked
                           />
                           <s>Cras justo odio</s>
-                        </li>
-                        <li
-                          className="list-group-item d-flex align-items-center border-0 mb-2 rounded"
-                          style={{ backgroundColor: "#f4f6f7" }}
-                        >
-                          <input
-                            className="form-check-input me-2"
-                            type="checkbox"
-                            value=""
-                            aria-label="..."
-                            checked
-                          />
-                          <s>Dapibus ac facilisis in</s>
                         </li>
                       </ul>
                     </div>
