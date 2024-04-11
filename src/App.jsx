@@ -25,6 +25,8 @@ function App() {
   function createTodo(e, title) {
     e.preventDefault();
 
+    if (title === "") return;
+
     setTodos((currentTodos) => {
       return [
         ...currentTodos,
