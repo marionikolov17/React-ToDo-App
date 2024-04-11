@@ -58,6 +58,7 @@ function App() {
                     {/* Ext Tab 1 - All */}
                     <div className="tab-pane fade show active" id="ex1-tabs-1">
                       <ul className="list-group mb-0">
+                        {todos.length === 0 && <p>There are not any todos, yet!</p>}
                         {todos.map((todo) => {
                           return (
                             <TodoItem
@@ -74,6 +75,7 @@ function App() {
                     {/* Ext Tab 2 */}
                     <div className="tab-pane fade" id="ex1-tabs-2">
                       <ul className="list-group mb-0">
+                        {todos.filter((todo) => todo.completed !== true).length === 0 && <p>There are not any active todos, yet!</p>}
                         {todos
                           .filter((todo) => todo.completed !== true)
                           .map((todo) => {
@@ -92,6 +94,7 @@ function App() {
                     {/* Ext Tab 3 */}
                     <div className="tab-pane fade" id="ex1-tabs-3">
                       <ul className="list-group mb-0">
+                        {todos.filter((todo) => todo.completed === true).length === 0 && <p>There are not any completed todos, yet!</p>}
                         {todos
                           .filter((todo) => todo.completed === true)
                           .map((todo) => {
