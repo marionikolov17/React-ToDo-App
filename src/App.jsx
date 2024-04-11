@@ -6,30 +6,41 @@ import TabsNavigation from "./TabsNavigation";
 import { useEffect, useState } from "react";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useState(() => {
+    const currentTodos = localStorage.getItem("todos");
+    if (currentTodos == null) {
+      return []
+    }
+
+    return JSON.parse(currentTodos);
+  });
 
   useEffect(() => {
     console.log(todos);
-  }, [todos])
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   function createTodo(e, title) {
     e.preventDefault();
 
-    setTodos(currentTodos => {
-      return [...currentTodos, { id: crypto.randomUUID(), title, completed: false }];
-    })
+    setTodos((currentTodos) => {
+      return [
+        ...currentTodos,
+        { id: crypto.randomUUID(), title, completed: false },
+      ];
+    });
   }
 
   function completeTodo(id) {
-    setTodos(currentTodos => {
-      return currentTodos.map(todo => {
+    setTodos((currentTodos) => {
+      return currentTodos.map((todo) => {
         if (todo.id === id) {
-          return {...todo, completed: true}
+          return { ...todo, completed: true };
         }
 
-        return todo
-      })
-    })
+        return todo;
+      });
+    });
   }
 
   return (
@@ -40,35 +51,60 @@ function App() {
             <div className="col col-xl-10">
               <div className="card">
                 <div className="card-body p-5">
-                  <CreateForm onSubmit={createTodo}/>
+                  <CreateForm onSubmit={createTodo} />
 
                   <TabsNavigation />
                   <div className="tab-content" id="ex1-content">
                     {/* Ext Tab 1 - All */}
-                    <div
-                      className="tab-pane fade show active"
-                      id="ex1-tabs-1"
-                    >
+                    <div className="tab-pane fade show active" id="ex1-tabs-1">
                       <ul className="list-group mb-0">
-                        {todos.map(todo => {
-                          return <TodoItem title={todo.title} completed={todo.completed} id={todo.id} completeTodo={completeTodo} key={todo.id}/>
+                        {todos.map((todo) => {
+                          return (
+                            <TodoItem
+                              title={todo.title}
+                              completed={todo.completed}
+                              id={todo.id}
+                              completeTodo={completeTodo}
+                              key={todo.id}
+                            />
+                          );
                         })}
                       </ul>
                     </div>
                     {/* Ext Tab 2 */}
-                    <div
-                      className="tab-pane fade"
-                      id="ex1-tabs-2"
-                    >
+                    <div className="tab-pane fade" id="ex1-tabs-2">
                       <ul className="list-group mb-0">
+                        {todos
+                          .filter((todo) => todo.completed !== true)
+                          .map((todo) => {
+                            return (
+                              <TodoItem
+                                title={todo.title}
+                                completed={todo.completed}
+                                id={todo.id}
+                                completeTodo={completeTodo}
+                                key={todo.id}
+                              />
+                            );
+                          })}
                       </ul>
                     </div>
                     {/* Ext Tab 3 */}
-                    <div
-                      className="tab-pane fade"
-                      id="ex1-tabs-3"
-                    >
+                    <div className="tab-pane fade" id="ex1-tabs-3">
                       <ul className="list-group mb-0">
+                        {todos
+                          .filter((todo) => todo.completed === true)
+                          .map((todo) => {
+                            return (
+                              <TodoItem
+                                title={todo.title}
+                                completed={todo.completed}
+                                id={todo.id}
+                                completeTodo={completeTodo}
+                                key={todo.id}
+                              />
+                            );
+                          })}
                       </ul>
                     </div>
                   </div>
