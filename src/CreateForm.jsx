@@ -1,4 +1,4 @@
-export default function CreateForm() {
+const CreateForm = () => {
   return (
     <form className="d-flex justify-content-center align-items-center mb-4 w-100">
       <div className="form-floating flex-fill">
@@ -16,3 +16,5 @@ export default function CreateForm() {
     </form>
   );
 }
+
+export default CreateForm
