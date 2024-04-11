@@ -11,7 +11,10 @@ export function TodoItem() {
           aria-label="..."
           defaultChecked
         />
-        <s>Todo item - random...</s>
+        {/* Completed: */}
+        {/* <s>Todo item - random...</s> */}
+        {/* Active: */}
+        Todo item - random...
       </li>
   );
 }
