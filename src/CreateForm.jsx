@@ -1,4 +1,4 @@
-export function CreateForm() {
+export default function CreateForm() {
   return (
     <form className="d-flex justify-content-center align-items-center mb-4 w-100">
       <div className="form-floating flex-fill">
