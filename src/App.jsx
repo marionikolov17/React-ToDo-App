@@ -32,15 +32,15 @@ function App() {
 
                   <TabsNavigation />
                   <div className="tab-content" id="ex1-content">
-                    {/* Ext Tab 1 */}
+                    {/* Ext Tab 1 - All */}
                     <div
                       className="tab-pane fade show active"
                       id="ex1-tabs-1"
                     >
                       <ul className="list-group mb-0">
-                        <TodoItem />
-                        <TodoItem />
-                        <TodoItem />
+                        {todos.map(todo => {
+                          return <TodoItem title={todo.title} completed={todo.completed} key={todo.id}/>
+                        })}
                       </ul>
                     </div>
                     {/* Ext Tab 2 */}
